@@ -2,7 +2,6 @@
   "name": "@ijavad805/react-datepicker",
   "version": "2.2.16",
   "description": "cool datepicker and calendar for English and Persian",
-  "type": "module",
   "scripts": {
     "rollup": "rollup -c",
     "test": "npx jest --watch",
