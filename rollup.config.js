@@ -7,14 +7,14 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 
-// const packageJson = require("./package.json");
-// const dependencies = ({ dependencies }) => Object.keys(dependencies || {});
-// const pkgdependencies = dependencies(packageJson);
+const packageJson = require("./package.json");
+const dependencies = ({ dependencies }) => Object.keys(dependencies || {});
+const pkgdependencies = dependencies(packageJson);
 
 export default [
     {
         input: "src/index.ts",
-        // external: id => pkgdependencies.includes(id),
+        external: id => pkgdependencies.includes(id),
         output: [
             {
                 file: packageJson.main,
